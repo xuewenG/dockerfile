@@ -7,13 +7,9 @@ qBittorrent
 ```bash
 docker run -d \
 -e PORT=8081 \
--e USERNAME=admin \
--e PASSWORD=adminadmin \
--p 8081:8081 \
--p 18625:18625/tcp \
--p 18625:18625/udp \
 -v /etc/localtime:/etc/localtime:ro \
 -v /var/docker-volume/qBittorrent:/qBittorrent \
+--network host \
 --restart always \
 --name qbittorrent-docker \
 ixuewen/qbittorrent
