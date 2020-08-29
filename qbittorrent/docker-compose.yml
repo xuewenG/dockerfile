@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  qbittorrent:
+    build: .
+    image: ixuewen/qbittorrent
+    container_name: qbittorrent-docker
+    restart: always
+    ports:
+      - "18625:18625/tcp"
+      - "18625:18625/udp"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /var/docker-volume/qBittorrent:/qBittorrent
+    environment:
+      - PORT=8081
