@@ -5,9 +5,7 @@ services:
     image: ixuewen/qbittorrent
     container_name: qbittorrent-docker
     restart: always
-    ports:
-      - "18625:18625/tcp"
-      - "18625:18625/udp"
+    network_mode: host
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /var/docker-volume/qBittorrent:/qBittorrent
