@@ -16,7 +16,7 @@ RUN set -x \
     && apt-get install wget transmission-daemon=$TR_VERSION -y \
     && mkdir -p /tmp/tr-web \
     && cd /tmp/tr-web \
-    && wget https://github.com/ronggang/transmission-web-control/archive/v1.6.0-beta2.tar.gz -O web.tar.gz \
+    && wget https://github.com/ronggang/transmission-web-control/archive/v1.6.1-update1.tar.gz -O web.tar.gz \
     && tar -xzvf web.tar.gz --strip-components=1 \
     && cp /usr/share/transmission/web/index.html /usr/share/transmission/web/index.original.html \
     && cp -rf src/* /usr/share/transmission/web/ \
